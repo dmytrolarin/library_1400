@@ -9,7 +9,7 @@
     {% for book in list_books %}
         <h2>{{book.title}} ({{book.year}} рік)</h2>
         <p>{{book.description}}</p>
-        <a href="">Читати</a>
+        <a href="{{ book.get_absolute_url }}">Читати</a>
         <hr>
     {% endfor %}
   </body>
