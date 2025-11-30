@@ -7,7 +7,8 @@
   <body>
     <h1>{{book.title}}</h1>
     <h2>Рік публікації: {{book.year}}</h2>
-    <h3>{{book.description}}</h3>
+    <h3><a href="{{book.author.get_absolute_url}}">Автор: {{book.author}}</a></h3>
+    <h4>{{book.description}}</h4>
     <hr>
     <p>{{book.content}}</p>
   </body>

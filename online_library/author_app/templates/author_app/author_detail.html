@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{ author.name }} {{ author.surname }}</h1>
+    <p> {{ author.biography }} </p>
+    <hr>
+    <h2>Книги, написнаі цим автором:</h2>
+    {% for book in author.book_set.all %}
+        <p><a href="{{book.get_absolute_url}}">{{book}}</a></p>
+    {% endfor %}
+    
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for author in authors %}
+        <h1>{{author.name}} {{author.surname}}</h1>
+        <a href="{{author.get_absolute_url}}">Детальніше</a>
+        <hr>
+    {% endfor %}
+</body>
+</html>
